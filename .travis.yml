@@ -8,7 +8,8 @@ before_install:
 
 
 script:
-  - docker run annamart/docker-react npm run test -- --coverage
+#  - docker run annamart/docker-react npm run test -- --coverage
+  - docker run --env CI=true mbagrat/docker-react npm run test
 
 
 deploy:
