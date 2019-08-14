@@ -4,17 +4,21 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    image: annamart/react-app
     ports:
       - "3000:3000"
     volumes:
-      - /app/node_modules
-      - C:/Users/annama/LearnSpace/Docker/frontend:/app
+      - /usr/app/node_modules
+      - ./:/usr/app
+    container_name: react-web-app
   tests:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    image: annamart/react-app-test
     volumes:
-        - /app/node_modules
-        - .:/app
+      - /usr/app/node_modules
+      - ./:/usr/app
+    container_name: react-web-app-tests
     command: ["npm", "run", "test"]
 
