@@ -16,7 +16,7 @@ function App() {
           Learn React
         </a>
         <p>
-          I was changed!
+          Hi there121212!
         </p>
       </header>
 
